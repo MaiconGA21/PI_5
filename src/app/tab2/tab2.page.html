@@ -1,35 +1,35 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Eleições
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>
+            Eleições
+        </ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Eleição Governamental</ion-card-title>
-      <ion-card-subtitle>TRF</ion-card-subtitle>
-    </ion-card-header>
+    <ion-card (click)="abrirEleicao(12)" *ngFor="let eleicao of lista | async">
+        <ion-card-header>
+            {{eleicao|json}}654g
+            <ion-card-title>Eleição Governamental</ion-card-title>
+            <ion-card-subtitle>TRF</ion-card-subtitle>
+        </ion-card-header>
 
-    <ion-card-content>
-      Data de inicio: 03 de outubro <br>
-      Data de fim: 03 de outubro
-    </ion-card-content>
-  </ion-card>
+        <ion-card-content>
+            Data de inicio: 03 de outubro <br> Data de fim: 03 de outubro
+        </ion-card-content>
 
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Eleição Acadêmica</ion-card-title>
-      <ion-card-subtitle>UNA - Barreiro</ion-card-subtitle>
-    </ion-card-header>
+    </ion-card>
 
-    <ion-card-content>
-      Data de inicio: 19 de março <br>
-      Data de fim: 22 de março
-    </ion-card-content>
-  </ion-card>
+    <ion-card (click)="abrirEleicao(1254)">
+        <ion-card-header>
+            <ion-card-title>Eleição Acadêmica</ion-card-title>
+            <ion-card-subtitle>UNA - Barreiro</ion-card-subtitle>
+        </ion-card-header>
+
+        <ion-card-content>
+            Data de inicio: 19 de março <br> Data de fim: 22 de março
+        </ion-card-content>
+    </ion-card>
 
 </ion-content>
