@@ -1,21 +1,22 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Tab2Page } from './tab2.page';
+import { EleicaoPage } from './eleicao.page';
 
-describe('Tab2Page', () => {
-  let component: Tab2Page;
-  let fixture: ComponentFixture<Tab2Page>;
+describe('EleicaoPage', () => {
+  let component: EleicaoPage;
+  let fixture: ComponentFixture<EleicaoPage>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [Tab2Page],
+      declarations: [ EleicaoPage ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
-    }).compileComponents();
+    })
+    .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(Tab2Page);
+    fixture = TestBed.createComponent(EleicaoPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -23,5 +24,4 @@ describe('Tab2Page', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-  
 });
