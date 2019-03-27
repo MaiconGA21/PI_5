@@ -20,9 +20,11 @@ export class Eleicao {
 
 
 export class Tab2Page {
- lista;
+   lista:any;
+
   constructor(public navCtrl: NavController, public db: AngularFireDatabase) {
-    this.lista = this.db.list('eleicao').valueChanges();
+    this.lista = this.db.list('/eleicao').valueChanges();
+    console.log(this.lista);
   }
 
   abrirEleicao(id){
