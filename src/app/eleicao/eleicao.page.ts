@@ -1,3 +1,4 @@
+import { Eleicao } from './../tab2/tab2.page';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
@@ -9,10 +10,11 @@ import { ActivatedRoute } from '@angular/router';
 export class EleicaoPage implements OnInit {
 
   constructor(private route: ActivatedRoute ) { }
-  id:any;
+  eleicao:Eleicao;
   ngOnInit() {
-    this.id = this.route.snapshot.paramMap.get('id');
-    alert(this.id);
+
+    // this.eleicao = this.route.snapshot.paramMap.get('eleicao');
+    console.log(this.eleicao.getCandidato());
   }
 
 }

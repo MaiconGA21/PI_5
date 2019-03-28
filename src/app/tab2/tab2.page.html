@@ -11,12 +11,13 @@
     <!-- <ion-card (click)="abrirEleicao(12)" *ngFor="let eleicao of lista | async"> -->
     <ion-card (click)="abrirEleicao(eleicao)" *ngFor="let eleicao of lista | async">
         <ion-card-header>
-            <ion-card-title>Eleição Governamental</ion-card-title>
-            <ion-card-subtitle>TRF</ion-card-subtitle>
+            <ion-card-title>{{eleicao.nome}}</ion-card-title>
+            <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
         </ion-card-header>
 
         <ion-card-content>
-            Data de inicio: 03 de outubro <br> Data de fim: 03 de outubro
+            Data de inicio: {{eleicao.data.inicio| date:'dd/MM/yyyy'}}
+            <br> Data de fim: {{eleicao.data.fim | date:'dd/MM/yyyy'}}
         </ion-card-content>
     </ion-card>
 
