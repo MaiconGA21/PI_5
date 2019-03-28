@@ -1,0 +1,38 @@
+[33mcommit 63f46d4d8eb3ab8b123922ea03c0b6797bd228dd[m[33m ([m[1;36mHEAD -> [m[1;32mdesenvolvimento[m[33m, [m[1;31morigin/desenvolvimento[m[33m)[m
+Author: edilsondasilva <edilsondasilva06@gmail.com>
+Date:   Thu Mar 28 06:27:08 2019 -0300
+
+    enetendo  o json e class no angular
+
+[33mcommit 5581466a1ad0df5a9e17fd69476a385306c80a64[m
+Author: edilsonss123 <edilson016@outlook.com>
+Date:   Tue Mar 26 22:20:38 2019 -0300
+
+    conexao com o FireBase
+
+[33mcommit 4d3568f7c1c18a151a80db666c52a0776fdda90f[m
+Merge: 4ca72ed 200ef6f
+Author: Edilson Santos <35012659+Edilsonss123@users.noreply.github.com>
+Date:   Sun Mar 24 15:17:51 2019 -0300
+
+    Merge pull request #1 from MaiconGA21/master
+    
+    criacao pagina eleicao e conexão com o firebase
+
+[33mcommit 200ef6ffbcd47fc0c6ed0a060ad08bd3239a4177[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m
+Author: edilsondasilva <edilsondasilva06@gmail.com>
+Date:   Sun Mar 24 14:33:55 2019 -0300
+
+    criacao pagina eleicao e conexão com o firebase
+
+[33mcommit 4ca72ed76ff3544a01f8d0aaf3e6c7877ef8b7df[m
+Author: MaiconGA21 <maiconguimaraes21@hotmail.com>
+Date:   Fri Mar 22 16:02:17 2019 -0300
+
+    alteracoes na pagina Perfil
+
+[33mcommit 5c3db340227df4690a18fa90ff57923470d9799f[m
+Author: MaiconGA21 <maiconguimaraes21@hotmail.com>
+Date:   Wed Mar 20 16:04:57 2019 -0300
+
+    Inicio de tudo

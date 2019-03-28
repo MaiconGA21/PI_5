@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
@@ -12,6 +13,7 @@ export class EleicaoPage implements OnInit {
   id:any;
   ngOnInit() {
     this.id = this.route.snapshot.paramMap.get('id');
+    alert(this.id);
   }
 
 }
