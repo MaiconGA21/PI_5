@@ -23,4 +23,10 @@ export class Tab2Page {
   abrirEleicao(id){
     this.navCtrl.navigateForward('eleicao/'+id);
   }
+  
+  sliderConfig = {
+    spaceBetween: 10,
+    centeredSlides: true,
+    sliderPerView: 1.6
+  }
 }

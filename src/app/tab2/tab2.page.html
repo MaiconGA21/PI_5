@@ -1,23 +1,28 @@
 <ion-header>
     <ion-toolbar>
         <ion-title>
-            Eleições
+            Principal
         </ion-title>
     </ion-toolbar>
 </ion-header>
 
 <ion-content>
+    <ion-row no-padding class="banner">
+        <ion-col text-center>Privadas</ion-col>
+    </ion-row>
+    <ion-slides [options]="sliderConfig">
+        <ion-slide>
+            <ion-card (click)="abrirEleicao(eleicao.id)" *ngFor="let eleicao of lista | async">
+                <ion-card-header>
+                    <ion-card-title>{{eleicao.nome}}</ion-card-title>
+                    <ion-card-subtitle>TRF</ion-card-subtitle>
+                </ion-card-header>
 
-    <ion-card (click)="abrirEleicao(eleicao.id)" *ngFor="let eleicao of lista | async">
-        <ion-card-header>
-            <ion-card-title>{{eleicao.nome}}</ion-card-title>
-            <ion-card-subtitle>TRF</ion-card-subtitle>
-        </ion-card-header>
-
-        <ion-card-content>
-            Data de inicio: {{eleicao.data.inicio   | date: 'dd/MM/yyyy'}} <br>
-            Data de fim:    {{eleicao.data.fim      | date: 'dd/MM/yyyy'}} 
-        </ion-card-content>
-    </ion-card>
-
+                <ion-card-content>
+                    Data de inicio: {{eleicao.data.inicio   | date: 'dd/MM/yyyy'}} <br>
+                    Data de fim: {{eleicao.data.fim      | date: 'dd/MM/yyyy'}}
+                </ion-card-content>
+            </ion-card>
+        </ion-slide>
+    </ion-slides>
 </ion-content>
