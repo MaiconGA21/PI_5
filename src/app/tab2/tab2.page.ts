@@ -14,10 +14,13 @@ import { AngularFireDatabase } from 'angularfire2/database';
 
 
 export class Tab2Page {
-   lista:any;
+   listaPr:any;
+   listaPu:any;
 
   constructor(public navCtrl: NavController, public db: AngularFireDatabase) {
-    this.lista = this.db.list('/eleicao').valueChanges();
+    this.listaPr = this.db.list('/eleicao/privada').valueChanges();
+    this.listaPu = this.db.list('/eleicao/publica').valueChanges();
+
   }
 
   abrirEleicao(id){
@@ -25,8 +28,8 @@ export class Tab2Page {
   }
   
   sliderConfig = {
-    spaceBetween: 10,
+    spaceBetween: 5,
     centeredSlides: true,
-    sliderPerView: 1.6
+    sliderPerView: 1
   }
 }

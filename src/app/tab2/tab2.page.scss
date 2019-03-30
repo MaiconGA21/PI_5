@@ -1,7 +1,10 @@
 .banner {
     border-left: 8px solid var(--ion-color-secondary);
     background: var(--ion-color-light);
-    height: 40px;
+    max-height: 60px;
     padding: 10px;
-    font-weight: 500;
+    font-weight: 800px;
+}
+.block{
+    margin-bottom:4px
 }
