@@ -28,8 +28,8 @@ export class Tab2Page {
   }
   
   sliderConfig = {
-    spaceBetween: 5,
+    spaceBetween: 10,
     centeredSlides: true,
-    sliderPerView: 1
+    slidesPerView: 1.6
   }
 }

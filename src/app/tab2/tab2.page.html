@@ -3,48 +3,51 @@
         <ion-title>
             Principal
         </ion-title>
+        <ion-buttons slot="end">
+            <ion-button>
+                <ion-icon slot="icon-only" name="return-right"></ion-icon>
+            </ion-button>
+        </ion-buttons>
     </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
     <ion-row no-padding class="banner">
         <ion-col text-center>Privadas</ion-col>
     </ion-row>
     <ion-slides [options]="sliderConfig">
-        <div *ngFor="let eleicaoPr of listaPr | async" class="block">
-            <ion-slide>
-                <ion-card (click)="abrirEleicao(eleicaoPr.id)" >
-                    <ion-card-header>
-                        <ion-card-title>{{eleicaoPr.nome}}</ion-card-title>
-                        <ion-card-subtitle>TRF</ion-card-subtitle>
-                    </ion-card-header>
-    
-                    <ion-card-content>
-                        Data de inicio: {{eleicaoPr.data.inicio   | date: 'dd/MM/yyyy'}} <br>
-                        Data de fim: {{eleicaoPr.data.fim      | date: 'dd/MM/yyyy'}}
-                    </ion-card-content>
-                </ion-card>
-            </ion-slide>
-        </div>
+        <ion-slide *ngFor="let eleicaoPr of listaPr | async">
+            <ion-card (click)="abrirEleicao(eleicaoPr.id)">
+                <ion-card-header>
+                    <ion-card-title>{{eleicaoPr.nome}}</ion-card-title>
+                    <ion-card-subtitle>TRF</ion-card-subtitle>
+                </ion-card-header>
+
+                <ion-card-content>
+                    Data de inicio: {{eleicaoPr.data.inicio   | date: 'dd/MM/yyyy'}} <br>
+                    Data de fim: {{eleicaoPr.data.fim      | date: 'dd/MM/yyyy'}}
+                </ion-card-content>
+            </ion-card>
+        </ion-slide>
     </ion-slides>
+
     <ion-row no-padding class="banner">
         <ion-col text-center>Pública</ion-col>
     </ion-row>
-        <ion-slides [options]="sliderConfig">
-            <div *ngFor="let eleicaoPu of listaPu | async" class="block">
-                <ion-slide>
-                    <ion-card (click)="abrirEleicao(eleicaoPu.id)" >
-                        <ion-card-header>
-                            <ion-card-title>{{eleicaoPu.nome}}</ion-card-title>
-                            <ion-card-subtitle>TRF</ion-card-subtitle>
-                        </ion-card-header>
-        
-                        <ion-card-content>
-                            Data de inicio: {{eleicaoPu.data.inicio   | date: 'dd/MM/yyyy'}} <br>
-                            Data de fim: {{eleicaoPu.data.fim      | date: 'dd/MM/yyyy'}}
-                        </ion-card-content>
-                    </ion-card>
-                </ion-slide>
-            </div>
-        </ion-slides>
+    <ion-slides [options]="sliderConfig">
+        <ion-slide *ngFor="let eleicaoPu of listaPu | async">
+            <ion-card (click)="abrirEleicao(eleicaoPu.id)">
+                <ion-card-header>
+                    <ion-card-title>{{eleicaoPu.nome}}</ion-card-title>
+                    <ion-card-subtitle>TRF</ion-card-subtitle>
+                </ion-card-header>
+
+                <ion-card-content>
+                    Data de inicio: {{eleicaoPu.data.inicio   | date: 'dd/MM/yyyy'}} <br>
+                    Data de fim: {{eleicaoPu.data.fim      | date: 'dd/MM/yyyy'}}
+                </ion-card-content>
+            </ion-card>
+        </ion-slide>
+    </ion-slides>
 </ion-content>
