@@ -1,0 +1,18 @@
+.banner {
+    border-left: 8px solid var(--ion-color-secondary);
+    background: var(--ion-color-light);
+    max-height: 60px;
+    padding: 10px;
+    font-weight: 800px;
+    color: black;
+}
+.block{
+    margin-bottom:4px
+}
+
+.tamanhomax {
+    width: 255px;
+    max-width: 255px;
+    height: 255px;
+    max-height: 255px;
+}
