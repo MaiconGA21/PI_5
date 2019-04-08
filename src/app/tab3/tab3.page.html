@@ -11,7 +11,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content color="dark">
 
   <ion-avatar style="margin: 20px auto; width: 45%; height: 30%">
     <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
@@ -28,42 +28,48 @@
       </ion-row>
     </ion-card>
     <div *ngIf="!expanded">
-      <ion-item>
-        <ion-label position="floating">Nome:</ion-label>
-        <ion-input required></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="floating">Email:</ion-label>
-        <ion-input required></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="floating">Identificação Acadêmica:</ion-label>
-        <ion-input></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="floating">Identificação Trabalhista:</ion-label>
-        <ion-input></ion-input>
-      </ion-item>
+      <ion-card>
+        <ion-item>
+          <ion-label position="floating">Nome:</ion-label>
+          <ion-input required></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Email:</ion-label>
+          <ion-input required></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Identificação Acadêmica:</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Identificação Trabalhista:</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+      </ion-card>
     </div>
   </div>
 
   <div class="block">
-    <ion-row no-padding class="banner">
-      <ion-col text-center button tappable (click)="expanded = !expanded">Alterar de senha</ion-col>
-    </ion-row>
+    <ion-card>
+      <ion-row no-padding class="banner">
+        <ion-col text-center button tappable (click)="expanded = !expanded">Alterar de senha</ion-col>
+      </ion-row>
+    </ion-card>
     <div *ngIf="expanded">
-      <ion-item>
-        <ion-label position="floating">Senha:</ion-label>
-        <ion-input type="password" required></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="floating">Nova senha:</ion-label>
-        <ion-input type="password"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="floating">Confirme nova senha:</ion-label>
-        <ion-input type="password"></ion-input>
-      </ion-item>
+      <ion-card>
+        <ion-item>
+          <ion-label position="floating">Senha:</ion-label>
+          <ion-input type="password" required></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Nova senha:</ion-label>
+          <ion-input type="password"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Confirme nova senha:</ion-label>
+          <ion-input type="password"></ion-input>
+        </ion-item>
+      </ion-card>
     </div>
   </div>
   <ion-button expand="block">Editar</ion-button>

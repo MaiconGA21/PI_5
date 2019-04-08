@@ -43,7 +43,7 @@ votacao:number;
     // this.db.object('/eleicao/privada/votacao1/candidatos/v')
    
   }
-
+/*cls
   getId(candidato) {
     let id = -1;
     for (let index = 0; index < this.candidatos.length; index++) {
@@ -54,5 +54,5 @@ votacao:number;
     }
     return id;
   }
-
+*/
 }
