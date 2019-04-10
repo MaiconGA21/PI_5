@@ -13,13 +13,10 @@ export class EleicaoService {
   tipo: string;
   data: any;
   votosTotal: number;
-  idEleicao: number;
+ 
 
 public setNome(nome){
   this.nome = nome;
-}
-public setIdEleicao(idEleicao){
-  this.idEleicao = idEleicao;
 }
 
 public setId(id){
@@ -64,10 +61,6 @@ public getData(){
 
 public getVotosTotal(){
   return this.votosTotal;
-}
-
-public getIdEleicao(){
-  return this.idEleicao;
 }
 
 }

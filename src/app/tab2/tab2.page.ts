@@ -28,9 +28,9 @@ export class Tab2Page {
     this.eleicaoService.setNome(eleicao.nome);
     this.eleicaoService.setTipo(eleicao.tipo);
     this.eleicaoService.setData(eleicao.data);
-    this.eleicaoService.setId(eleicao.eleicao);
+    this.eleicaoService.setId(idEleicao);
     this.eleicaoService.setVotosTotal(eleicao.votosTotal);
-    this.eleicaoService.setIdEleicao(idEleicao);
+
     this.navCtrl.navigateForward('eleicao');
 
   }

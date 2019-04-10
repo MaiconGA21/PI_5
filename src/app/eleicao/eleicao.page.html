@@ -16,12 +16,13 @@
             <ion-card-subtitle>asdasdsdfsdgf</ion-card-subtitle>
 
         </ion-card-header>
-        <ion-card *ngFor="let candidato of candidatos">
+        <ion-card *ngFor="let candidato of candidatos let i = index">
 
             <ion-card-content>
+                    <img src="assets/img/{{candidato.caminhoImg}}"/>
                     <ion-card-subtitle>{{candidato.nome}} - Nº: {{candidato.NumCandidato}}</ion-card-subtitle>
 
-                <ion-button (click)="gravarVoto(candidato.NumCandidato)" expand="block" color="success">Votar</ion-button>
+                <ion-button (click)="gravarVoto(candidatos,i)" expand="block" color="success">Votar</ion-button>
             </ion-card-content>
 
         </ion-card>

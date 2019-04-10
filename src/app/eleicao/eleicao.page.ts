@@ -21,7 +21,8 @@ export class EleicaoPage implements OnInit {
   votosTotal: number;
   idEleicao: number;
   caminho: string;
-votacao:number;
+  votacao:number;
+
   ngOnInit() {
     this.nome = this.eleicaoService.getNome();
     this.id = this.eleicaoService.getId();
@@ -29,32 +30,21 @@ votacao:number;
     this.tipo = this.eleicaoService.getTipo();
     this.data = this.eleicaoService.getData();
     this.votosTotal = this.eleicaoService.getVotosTotal();
-    this.idEleicao = this.eleicaoService.getIdEleicao();
     this.votacao = 0;
     console.log(this.candidatos);
   }
 
-  gravarVoto(NumCandidato,) {
+  gravarVoto(candidatos,i) {
     if (this.tipo == 'PR') {
-      this.caminho = '/eleicao/privado/';
+      this.caminho = '/eleicao/privada/votacao';
     } else {
-      this.caminho = '/eleicao/publica/';
+      this.caminho = '/eleicao/publica/votacao';
     }
-    this.caminho +=this.idEleicao;
+    this.caminho +=this.id;
+    candidatos[i].votosRecebidos = candidatos[i].votosRecebidos + 1;
+    const gravaVoto = this.db.object(this.caminho);
+    gravaVoto.update({ candidatos });
+    const itemRef = this.db.object(this.caminho);
+  }
 
-    this.db.object('/eleicao/privada/votacao1/candidatos/v')
-   
-  }
-/*cls
-  getId(candidato) {
-    let id = -1;
-    for (let index = 0; index < this.candidatos.length; index++) {
-      if (this.candidatos[index].NumCandidato === candidato.NumCandidato) {
-        id = index;
-        break;
-      }
-    }
-    return id;
-  }
-*/
 }
