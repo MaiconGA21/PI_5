@@ -27,7 +27,9 @@
     "angularfire2": "^5.1.2",
     "core-js": "^2.5.4",
     "firebase": "^5.9.1",
+    "python": "0.0.4",
     "rxjs": "~6.3.3",
+    "web3": "github:ethereum/web3.js",
     "zone.js": "~0.8.29"
   },
   "devDependencies": {
