@@ -13,7 +13,7 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/common": "^7.2.2",
+    "@angular/common": "^7.2.14",
     "@angular/core": "^7.2.2",
     "@angular/forms": "^7.2.2",
     "@angular/http": "^7.2.2",
@@ -29,7 +29,7 @@
     "firebase": "^5.9.1",
     "python": "0.0.4",
     "rxjs": "~6.3.3",
-    "web3": "github:ethereum/web3.js",
+    "web3": "github:ethereum/web3.js#develop",
     "zone.js": "~0.8.29"
   },
   "devDependencies": {
