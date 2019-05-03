@@ -22,13 +22,13 @@ export class Tab2Page {
     
   }
   
-  abrirEleicao(eleicao,idEleicao) {
+  abrirEleicao(eleicao) {
     this.eleicaoService.setCandidatos(eleicao.candidatos);
     
     this.eleicaoService.setNome(eleicao.nome);
     this.eleicaoService.setTipo(eleicao.tipo);
     this.eleicaoService.setData(eleicao.data);
-    this.eleicaoService.setId(idEleicao);
+    this.eleicaoService.setId(eleicao.id);
     this.eleicaoService.setVotosTotal(eleicao.votosTotal);
 
     this.navCtrl.navigateForward('eleicao');

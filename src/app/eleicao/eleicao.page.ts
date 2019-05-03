@@ -2,6 +2,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { EleicaoService } from '../eleicao.service';
+import { Web3ServiceService } from '../web-3-service.service';
 import { AngularFireDatabase } from 'angularfire2/database';
 
 @Component({
@@ -11,7 +12,7 @@ import { AngularFireDatabase } from 'angularfire2/database';
 })
 export class EleicaoPage implements OnInit {
 
-  constructor(private route: ActivatedRoute, public eleicaoService: EleicaoService, public db: AngularFireDatabase) { }
+  constructor(private route: ActivatedRoute, public eleicaoService: EleicaoService,public web: Web3ServiceService ,public db: AngularFireDatabase) { }
   eleicao: any;
   nome: string;
   id: number;
@@ -31,6 +32,7 @@ export class EleicaoPage implements OnInit {
     this.data = this.eleicaoService.getData();
     this.votosTotal = this.eleicaoService.getVotosTotal();
     this.votacao = 0;
+    this.web;
     console.log(this.candidatos);
   }
 
@@ -43,6 +45,7 @@ export class EleicaoPage implements OnInit {
     this.caminho +=this.id;
     candidatos[i].votosRecebidos = candidatos[i].votosRecebidos + 1;
     const gravaVoto = this.db.object(this.caminho);
+
     gravaVoto.update({ candidatos });
     const itemRef = this.db.object(this.caminho);
   }

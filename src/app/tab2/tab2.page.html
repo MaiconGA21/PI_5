@@ -19,7 +19,7 @@
 </ion-card>
     <ion-slides [options]="sliderConfig">
         <ion-slide *ngFor="let eleicaoPr of listaPr | async let idEleicao = index">
-            <ion-card color="light" (click)="abrirEleicao(eleicaoPr,idEleicao)" >
+            <ion-card color="light" (click)="abrirEleicao(eleicaoPr)" >
                 <ion-card-header>
                     <ion-card-title>{{eleicaoPr.nome}}</ion-card-title>
                     <ion-card-subtitle>TRF</ion-card-subtitle>
@@ -39,7 +39,7 @@
     <ion-slides [options]="sliderConfig">
         <ion-slide *ngFor="let eleicaoPu of listaPu | async let idEleicao = index">
             
-            <ion-card color="light"  (click)="abrirEleicao(eleicaoPu,idEleicao)">
+            <ion-card color="light"  (click)="abrirEleicao(eleicaoPu)">
                 <ion-card-header>
                     <ion-card-title>{{eleicaoPu.nome}}</ion-card-title>
                     <ion-card-subtitle>TRF</ion-card-subtitle>
