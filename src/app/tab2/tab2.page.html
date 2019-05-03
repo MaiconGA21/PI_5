@@ -1,23 +1,56 @@
 <ion-header>
     <ion-toolbar>
         <ion-title>
-            Eleições
+            Principal
         </ion-title>
+        <ion-buttons slot="end">
+            <ion-button href="login">
+                <ion-icon name="return-right" slot="icon-only"></ion-icon>
+            </ion-button>
+        </ion-buttons>
     </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content color="dark">
+<ion-card>
+    <ion-row no-padding class="banner">
+        <ion-col text-center>Privadas</ion-col>
+    </ion-row>
+</ion-card>
+    <ion-slides [options]="sliderConfig">
+        <ion-slide *ngFor="let eleicaoPr of listaPr | async let idEleicao = index">
+            <ion-card color="light" (click)="abrirEleicao(eleicaoPr)" >
+                <ion-card-header>
+                    <ion-card-title>{{eleicaoPr.nome}}</ion-card-title>
+                    <ion-card-subtitle>TRF</ion-card-subtitle>
+                </ion-card-header>
+                <ion-card-content>
+                    Data de inicio: {{eleicaoPr.data.inicio | date: 'dd/MM/yyyy'}} <br>
+                    Data de fim: {{eleicaoPr.data.fim | date: 'dd/MM/yyyy'}}
+                </ion-card-content>
+            </ion-card>
+        </ion-slide>
+    </ion-slides>
+<ion-card>
+    <ion-row no-padding class="banner">
+        <ion-col text-center>Pública</ion-col>
+    </ion-row>
+</ion-card>
+    <ion-slides [options]="sliderConfig">
+        <ion-slide *ngFor="let eleicaoPu of listaPu | async let idEleicao = index">
+            
+            <ion-card color="light"  (click)="abrirEleicao(eleicaoPu)">
+                <ion-card-header>
+                    <ion-card-title>{{eleicaoPu.nome}}</ion-card-title>
+                    <ion-card-subtitle>TRF</ion-card-subtitle>
+                </ion-card-header>
 
-    <ion-card (click)="abrirEleicao(eleicao.id)" *ngFor="let eleicao of lista | async">
-        <ion-card-header>
-            <ion-card-title>{{eleicao.nome}}</ion-card-title>
-            <ion-card-subtitle>TRF</ion-card-subtitle>
-        </ion-card-header>
-
-        <ion-card-content>
-            Data de inicio: {{eleicao.data.inicio   | date: 'dd/MM/yyyy'}} <br>
-            Data de fim:    {{eleicao.data.fim      | date: 'dd/MM/yyyy'}} 
-        </ion-card-content>
-    </ion-card>
-
+                <ion-card-content>
+                    Data de inicio: {{eleicaoPu.data.inicio | date: 'dd/MM/yyyy'}} <br>
+                    Data de fim: {{eleicaoPu.data.fim | date: 'dd/MM/yyyy'}}
+                </ion-card-content>
+            </ion-card>
+        </ion-slide>
+    </ion-slides>
+    
 </ion-content>

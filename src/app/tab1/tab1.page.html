@@ -1,13 +1,19 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Buscar
+      Criar nova votação
     </ion-title>
+    <ion-buttons slot="end">
+      <ion-button  href="login">
+        <ion-icon name="return-right" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content color="dark">
 
-  <ion-searchbar></ion-searchbar>
+  <ion-button expand="block">Pública</ion-button>
+  <ion-button expand="block" color="success">Privada</ion-button>
 
 </ion-content>

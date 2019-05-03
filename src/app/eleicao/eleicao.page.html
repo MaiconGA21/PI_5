@@ -1,21 +1,31 @@
 <ion-header>
     <ion-toolbar>
-        <ion-back-button defaultHref="tabs/tab2"></ion-back-button>
-        <ion-title>
-      
+
+        <ion-title> 
+                   <ion-back-button  defaultHref="tabs/tab2"></ion-back-button>
+            {{nome}}
         </ion-title>
     </ion-toolbar>
 </ion-header>
 
-<ion-content>
-    <ion-card>
+<ion-content color="dark">
+    <ion-card color="light">
         <ion-card-header>
-          <ion-card-subtitle>Votação </ion-card-subtitle>
-          <ion-card-title>Card Title</ion-card-title>
+            <ion-card-subtitle>Data de inicio: {{data.inicio | date: 'dd/MM/yyyy'}}</ion-card-subtitle>
+            <ion-card-subtitle>Data de fim: {{data.fim | date: 'dd/MM/yyyy'}}</ion-card-subtitle>
+            <ion-card-subtitle>Está e uma votação muito interessante</ion-card-subtitle>
+
         </ion-card-header>
-      
-        <ion-card-content>
-          
-        </ion-card-content>
-      </ion-card>
+        <ion-card *ngFor="let candidato of candidatos let i = index">
+
+            <ion-card-content>
+                    <img src="assets/img/{{candidato.caminhoImg}}"/>
+                    <ion-card-subtitle>{{candidato.nome}} - Nº: {{candidato.NumCandidato}}</ion-card-subtitle>
+
+                <ion-button (click)="gravarVoto(candidatos,i)" expand="block" color="success">Votar</ion-button>
+            </ion-card-content>
+
+        </ion-card>
+
+    </ion-card>
 </ion-content>
