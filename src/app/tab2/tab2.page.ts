@@ -37,7 +37,7 @@ export class Tab2Page {
 
   sliderConfig = {
     slidesPerView: 1.6,
-    spaceBetween: 10,
+    spaceBetween: 2,
     centeredSlides: true
   }
 }
